@@ -28,8 +28,6 @@ function Persona(_nome, _cognome, _nascita) {
     };
 }
 
-console.log(26 < 07);
-
 // BUTTON CLICK
 btn.addEventListener("click", function() {
 
