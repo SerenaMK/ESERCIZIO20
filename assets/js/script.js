@@ -16,10 +16,9 @@ function Persona(_nome, _cognome, _nascita) {
     this.nascita = _nascita;
 
     this.calcoloEta = function(){
-        var dataNascita = new Date(document.getElementById("data").value);
-        var eta = dataOggi.getFullYear() - dataNascita.getFullYear();
-        var meseNascita = dataNascita.getMonth();
-        var giornoNascita = dataNascita.getDate();
+        var eta = dataOggi.getFullYear() - parseInt(nascita.value.slice(0, 4));
+        var meseNascita = parseInt(nascita.value.slice(5, 7));
+        var giornoNascita = parseInt(nascita.value.slice(8, 10));
         
         if(meseNascita > meseOggi || (meseNascita == meseOggi && giornoNascita > giornoOggi)) {
             eta = eta - 1;
