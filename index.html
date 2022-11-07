@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esercizio</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <!-- My CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+
+            <div class="col-6">
+
+                <form>
+                    <label for="nome" class="form-label">NOME</label><br>
+                    <input type="text" name="nome" id="nome" class="form-control"><br>
+                    <label for="nome" class="form-label">COGNOME</label><br>
+                    <input type="text" name="cognome" id="cognome" class="form-control"><br>
+                    <label for="nome" class="form-label">DATA DI NASCITA</label><br>
+                    <input type="date" name="data" id="data" class="form-control">
+                    <br>
+                    <button type="button" class="btn btn-outline-primary" id="button">Add</button>
+                </form>
+
+            </div>
+
+            <div class="col-6" id="risultati">
+                <table class="table" id="lista">
+
+                    <tr class="bg-light">
+                        <th>Nome</th>
+                        <th>Età</th>
+                    </tr>
+                    
+                </table>
+            </div>
+
+        </div>
+    </div>
+
+    
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+    <!-- My Script -->
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
