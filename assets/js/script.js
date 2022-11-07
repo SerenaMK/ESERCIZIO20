@@ -6,7 +6,7 @@ var btn = document.getElementById("button");
 
 // DATA OGGI
 var dataOggi = new Date;
-var meseOggi = dataOggi.getMonth();
+var meseOggi = dataOggi.getMonth() + 1;
 var giornoOggi = dataOggi.getDate();
 
 // CLASSE
