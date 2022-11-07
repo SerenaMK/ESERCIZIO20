@@ -20,11 +20,11 @@ function Persona(_nome, _cognome, _nascita) {
         var meseNascita = nascita.value.slice(5, 7);
         var giornoNascita = nascita.value.slice(9, 11);
 
-        if(meseOggi > meseNascita) {
+        if(meseNascita == meseOggi && giornoNascita < giornoOggi) {
             eta = eta - 1;
         }
         
-        if(meseNascita == meseOggi && giornoNascita > giornoOggi) {
+        if(meseNascita > meseOggi) {
             eta = eta - 1;
         }
 
