@@ -6,7 +6,7 @@ var btn = document.getElementById("button");
 
 // DATA OGGI
 var dataOggi = new Date;
-var meseOggi = dataOggi.getMonth() + 1;
+var meseOggi = dataOggi.getMonth();
 var giornoOggi = dataOggi.getDate();
 
 // CLASSE
@@ -16,21 +16,20 @@ function Persona(_nome, _cognome, _nascita) {
     this.nascita = _nascita;
 
     this.calcoloEta = function(){
-        var eta = dataOggi.getFullYear() - nascita.value.slice(0, 4);
-        var meseNascita = nascita.value.slice(5, 7);
-        var giornoNascita = nascita.value.slice(9, 11);
-
-        if(meseNascita == meseOggi && giornoNascita > giornoOggi) {
-            eta = eta - 1;
-        }
+        var dataNascita = new Date(document.getElementById("data").value);
+        var eta = dataOggi.getFullYear() - dataNascita.getFullYear();
+        var meseNascita = dataNascita.getMonth();
+        var giornoNascita = dataNascita.getDate();
         
-        if(meseNascita > meseOggi) {
+        if(meseNascita > meseOggi || (meseNascita == meseOggi && giornoNascita > giornoOggi)) {
             eta = eta - 1;
-        }
-
+        };
+        
         return eta;
     };
 }
+
+console.log(26 < 07);
 
 // BUTTON CLICK
 btn.addEventListener("click", function() {
